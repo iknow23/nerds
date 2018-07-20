@@ -348,11 +348,6 @@ p.service-description {
     padding-top: 17px;
 }
 
-
-
-
-
-
 .services-item:first-of-type .button {
     background-color: #fb565a;
 }
@@ -1047,7 +1042,7 @@ fieldset.filter-item {
 }
 
 .price-controls input {
-    width: 60px;
+    width: 80px;
     padding: 8px 10px;
     margin-left: 10px;
 
@@ -1072,6 +1067,7 @@ fieldset.filter-item {
     
     display: block;
     cursor: pointer;
+    color: #283136;
 }
 
 .filter-input-radio + label::before {
@@ -1092,6 +1088,7 @@ fieldset.filter-item {
 	content: "";
 
     position: absolute;
+    z-index: 10;
     top: -3px;
     left: 0;
 
@@ -1100,6 +1097,42 @@ fieldset.filter-item {
     
     background-image: url("../img/radio-on.svg");
     background-repeat: no-repeat;
+}
+
+.filter-input-radio + label {
+    color: #000000;
+}
+
+.filter-input-radio + label::before,
+.filter-input-radio + label::after {
+    opacity: 0.4;
+}
+
+.filter-input-radio + label:hover::before,
+.filter-input-radio + label:hover::after {
+    opacity: 1;
+}
+
+.filter-input-radio:disabled + label {
+    color: #283136;
+    opacity: 0.3;
+}
+
+.filter-input-radio:disabled + label::before,
+.filter-input-radio:disabled + label::after {
+    opacity: 0.1;
+}
+
+.filter-input-radio:checked + label::before,
+.filter-input-radio:checked + label::after {
+    opacity: 0.4;
+}
+
+.filter-input-radio:checked + label:hover::before,
+.filter-input-radio:checked + label:hover::after,
+.filter-input-radio:checked + label:focus::before,
+.filter-input-radio:checked + label:focus::after {
+    opacity: 1;
 }
 /*radio end*/
 
@@ -1138,6 +1171,42 @@ fieldset.filter-item {
     background-image: url("../img/checkbox-on.svg");
     background-repeat: no-repeat;
 }
+
+.filter-input-checkbox + label {
+    color: #000000;
+}
+
+.filter-input-checkbox + label::before,
+.filter-input-checkbox + label::after {
+    opacity: 0.4;
+}
+
+.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox + label:hover::after {
+    opacity: 1;
+}
+
+.filter-input-checkbox:disabled + label {
+    color: #283136;
+    opacity: 0.3;
+}
+
+.filter-input-checkbox:disabled + label::before,
+.filter-input-checkbox:disabled + label::after {
+    opacity: 0.1;
+}
+
+.filter-input-checkbox:checked + label::before,
+.filter-input-checkbox:checked + label::after {
+    opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label:hover::before,
+.filter-input-checkbox:checked + label:hover::after,
+.filter-input-checkbox:checked + label:focus::before,
+.filter-input-checkbox:checked + label:focus::after {
+    opacity: 1;
+}
 /*checkbox end*/
 
 button.filter-button {
@@ -1153,12 +1222,25 @@ button.filter-button {
     background-color: #eeeeee;
     border: none;
     cursor: pointer;
+    border-radius: 3px;
+}
+
+button.filter-button:hover,
+button.filter-button:focus {
+    background-color: #dfdfdf;
+}
+
+button.filter-button:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #d5d5d5;
+    box-shadow: inset 0px 3px 0px 0px #bfbfbf;
 }
 /*filters end*/
 
 /*block-of-templates start*/
 .block-of-templates {
     width: 760px;
+    margin-bottom: 35px;
 }
 
 /*sorting start*/
@@ -1192,6 +1274,15 @@ button.filter-button {
 
     color: #000000;
     opacity: 0.3;
+}
+
+.list-by a:hover,
+.list-by a:focus {
+    opacity: 0.6;
+}
+
+.list-by a:active {
+    opacity: 1;
 }
 
 .list-by a.active-list-by {
@@ -1231,27 +1322,39 @@ button.filter-button {
     justify-content: space-between;
     flex-wrap: wrap;
 
-    width: 800px;
-    
-    outline: 1px solid blue;
+    width: 760px;
 }
 
-.catalog-templates .templates-hover {
+.templates {
+    position: relative;
+
+    min-height: 649px;
+}
+
+.templates-hover {
     display: none;
     position: absolute;
+    top: 386px;
+    z-index: 10;
     width: 360px;
+    padding: 9px 78px;
     min-height: 230px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
     background-color: #eeeeee;
-    margin-top: 385px;
+}
+
+.templates:hover .templates-hover {
+    display: block;
+}
+
+.templates:hover {
+    cursor: pointer;
 }
 
 .templates-hover p:first-of-type {
-    margin-top: -14px;
+    margin-left: -3px;
+    margin-bottom: 14px;
 
     font-size: 18px;
     line-height: 30px;
@@ -1262,29 +1365,75 @@ button.filter-button {
 }
 
 .templates-hover p:last-of-type {
-    margin-top: -2px;
+    margin-left: 12px;
+    margin-top: 0;
+    margin-bottom: 31px;
     width: 180px;
     line-height: 18px;
 }
 
 .templates-hover .button {
-    margin-top: 14px;
-    padding: 16px 62px;
+    padding: 16px 61px;
+    padding-left: 63px;
 }
-
-
 /*catalog-templates end*/
-
-
-
-
 /*block-of-templates end*/
 
+/*pagination-list end*/
+.pagination-list {
+    display: flex;
+    justify-content: space-between;
+
+    width: 375px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6px;
+    margin-bottom: 7px;
+    padding: 0;
+    padding-left: 7px;
+
+    list-style: none;
+}
+
+.pagination-list li:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.pagination-list a {
+    background-color: #eeeeee;
+    padding: 16px 22px;
+    color: #000000;
+    border-radius: 3px;
+}
+
+.pagination-list li:not(:first-of-type) a:hover,
+.pagination-list li:not(:first-of-type) a:focus {
+    background-color: #dfdfdf;
+}
+
+.pagination-list li:not(:first-of-type) a:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #d5d5d5;
+    box-shadow: inset 0px 3px 0px 0px #bfbfbf;
+}
+
+.pagination-item-current a {
+    padding: 13px 18px;
+
+    background-color: #ffffff;
+    border: 2px solid #dbdbdb;
+}
+
+.pagination-list li:last-of-type a {
+    padding: 14px 76px;
+    padding-right: 78px;
+}
+/*pagination-list start*/
 
 
 /*footer-inner start*/
 .footer-social-inner {
     margin-top: 420px;
 }
-
 /*footer-inner end*/
