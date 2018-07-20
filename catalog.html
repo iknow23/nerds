@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Дизайн-студия "Нёрдс": Магазин шаблонов</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
     <!--header start-->
@@ -108,6 +108,7 @@
 
             <!--block-of-templates start-->
             <section class="block-of-templates">
+                <h2 class="visually-hidden">Наши шаблоны:</h2>
                 <div class="sorting">
                     <span>Сортировать:</span>
                     <ul class="list-by">
@@ -130,6 +131,7 @@
                 </div>
                 <div class="catalog-templates">
                     <article class="templates">
+                        <h3 class="visually-hidden">Шаблон сайта Седона</h3>
                         <div class="templates-main-image">
                             <img src="img/catalog-sedona.png" width="360" height="616" alt="Изображение шаблона сайта Седона">
                         </div>
@@ -140,6 +142,7 @@
                         </div>
                     </article>
                     <article class="templates">
+                        <h3 class="visually-hidden">Шаблон сайта Pink</h3>
                         <div class="templates-main-image">
                             <img src="img/catalog-pink.png" width="360" height="616" alt="Изображение шаблона сайта Pink">
                         </div>
@@ -150,6 +153,7 @@
                         </div>
                     </article>
                     <article class="templates">
+                        <h3 class="visually-hidden">Шаблон сайта Барбершоп</h3>
                         <div class="templates-main-image">
                             <img src="img/catalog-barbershop.png" width="360" height="616" alt="Изображение шаблона сайта Барбершопа Бородинский">
                         </div>
@@ -160,6 +164,7 @@
                         </div>
                     </article>
                     <article class="templates">
+                        <h3 class="visually-hidden">Шаблон сайта Мишек</h3>
                         <div class="templates-main-image">
                             <img src="img/catalog-mishki.png" width="360" height="616" alt="Изображение шаблона сайта Мишки ручной работы">
                         </div>
@@ -170,6 +175,7 @@
                         </div>
                     </article>
                     <article class="templates">
+                        <h3 class="visually-hidden">Шаблон сайта повышения квалификации</h3>
                         <div class="templates-main-image">
                             <img src="img/catalog-education.png" width="360" height="616" alt="Изображение шаблона сайта повышения квалификации">
                         </div>
@@ -180,6 +186,7 @@
                         </div>
                     </article>
                     <article class="templates">
+                        <h3 class="visually-hidden">Шаблон сайта крафтового кваса</h3>
                         <div class="templates-main-image">
                             <img src="img/catalog-kvas.png" width="360" height="616" alt="Изображение шаблона сайта крафтового кваса">
                         </div>
@@ -211,7 +218,7 @@
         <!--contacts start-->
         <section class="contacts">
             <h2 class="visually-hidden">Как нас найти?</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651568!2d30.32089461614341!3d59.938794181876276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1531898305149" width="600" height="418" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651568!2d30.32089461614341!3d59.938794181876276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1531898305149" width="600" height="418" style="border:0" allowfullscreen></iframe>
             <p class="map-image">
                 <img src="img/map.png" width="1440" height="416" alt="Карта с расположением дизайн-студии">
             </p>
@@ -226,6 +233,7 @@
         
         <!--footer-social start-->
         <section class="footer-social container">
+            <h2 class="visually-hidden">Ссылки на социальные сети</h2>
             <ul class="social-list">
                 <li>
                     <a href="#"><span class="visually-hidden">ВКонтакте</span>
@@ -251,5 +259,31 @@
         <!--footer-social end-->
     </footer>
     <!--footer end-->
+    
+    <!--modal-feedback start-->
+    <div class="overlay">
+        <section class="modal-feedback">
+            <h2>Напишите нам</h2>
+            <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
+                <p class="feedback-form-item">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" name="user-name" id="name" placeholder="Имя Фамилия" required>
+                </p>
+                <p class="feedback-form-item">
+                    <label for="mail">Ваш e-mail:</label>
+                    <input type="email" name="user-mail" id="mail" placeholder="email@example.com" required>
+                </p>
+                <p class="feedback-form-item">
+                    <label for="comment">Текст письма:</label>
+                    <textarea name="user-comment" id="comment" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+                </p>
+                <button class="button" type="submit">Отправить</button>
+                <button class="modal-close" type="button" aria-label="Закрыть"></button>
+            </form>
+        </section>
+    </div>
+    <!--modal-feedback end-->
+
+    <script src="js/script.min.js"></script>
 </body>
 </html>

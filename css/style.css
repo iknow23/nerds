@@ -12,13 +12,15 @@ body {
 }
 
 html {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+	        box-sizing: inherit;
 }
 
 a {
@@ -59,9 +61,15 @@ a {
     position: relative;
     top: 49px;
     z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .main-logo {
@@ -105,6 +113,8 @@ a {
 }
 
 .site-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
 }
@@ -317,8 +327,12 @@ p.promo-description b {
 }
 
 .services-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 0;
     max-width: 1100px;
     padding: 0;
@@ -359,7 +373,8 @@ p.service-description {
 
 .services-item:first-of-type .button:active {
     color: rgb(228, 122, 125);
-    box-shadow: inset 0px 4px 1px 0px #c13135;
+    -webkit-box-shadow: inset 0px 4px 1px 0px #c13135;
+            box-shadow: inset 0px 4px 1px 0px #c13135;
 }
 
 .services-item:nth-of-type(2) .button {
@@ -373,7 +388,8 @@ p.service-description {
 
 .services-item:nth-of-type(2) .button:active {
     color: rgb(77, 196, 145);
-    box-shadow: inset 0px 4px 1px 0px #009958;
+    -webkit-box-shadow: inset 0px 4px 1px 0px #009958;
+            box-shadow: inset 0px 4px 1px 0px #009958;
 }
 
 .services-item:last-of-type .button {
@@ -387,7 +403,8 @@ p.service-description {
 
 .services-item:last-of-type .button:active {
     color: rgb(237, 194, 101);
-    box-shadow: inset 0px 4px 1px 0px #ce961f;
+    -webkit-box-shadow: inset 0px 4px 1px 0px #ce961f;
+            box-shadow: inset 0px 4px 1px 0px #ce961f;
 }
 
 .services-item {
@@ -413,8 +430,12 @@ p.service-description {
 
 /*about-us start*/
 .about-us {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 25px;
     padding-bottom: 58px;
     border-bottom: 2px solid #eeeeee;
@@ -534,8 +555,11 @@ tr.second-row td {
 
 /*clients start*/
 .clients-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 
     padding-top: 45px;
     padding-bottom: 36px;
@@ -640,13 +664,19 @@ li.img-mishka {
 
 /*footer-social start*/
 .footer-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 111px;
     padding-bottom: 70px;
 }
 
 .social-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-right: 131px;
     padding: 0px;
@@ -670,8 +700,14 @@ li.img-mishka {
     border-radius: 50%;
     opacity: 0.2;
     
+    -webkit-transition-property: background-color;
+    
+    -o-transition-property: background-color;
+    
     transition-property: background-color;
-    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+         -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;
 }
 
 .social-list a:hover,
@@ -682,7 +718,8 @@ li.img-mishka {
 
 .social-list a:active {
     background-color: #d7373b;
-    box-shadow: inset 0px 4px 1px 0px #c13135;
+    -webkit-box-shadow: inset 0px 4px 1px 0px #c13135;
+            box-shadow: inset 0px 4px 1px 0px #c13135;
 }
 
 .social-list a:active svg {
@@ -798,7 +835,8 @@ li.img-mishka {
     padding: 68px 60px 83px 99px;
 
     background-color: #ffffff;
-    box-shadow: 0px 20px 80px -10px #000000;
+    -webkit-box-shadow: 0px 20px 80px -10px #000000;
+            box-shadow: 0px 20px 80px -10px #000000;
     
 	-webkit-animation: bounce 0.6s;
          animation: bounce 0.6s;
@@ -835,8 +873,11 @@ li.img-mishka {
 }
 
 .feedback-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .feedback-form label {
@@ -937,11 +978,15 @@ button.modal-close::after {
 }
 
 button.modal-close::before {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 button.modal-close::after {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 button.modal-close:hover::before,
@@ -992,8 +1037,12 @@ li.site-navigation-current a {
 
 /*main start*/
 .main-inner-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 56px;
 }
 
@@ -1115,7 +1164,8 @@ fieldset.filter-item {
 
     border: 8px solid #ffffff;
     background-color: #ababab;
-    box-shadow: 0 2px 1px 0 #cfcfcf;
+    -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
+            box-shadow: 0 2px 1px 0 #cfcfcf;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -1332,7 +1382,8 @@ button.filter-button:focus {
 button.filter-button:active {
     color: rgba(0, 0, 0, 0.3);
     background-color: #d5d5d5;
-    box-shadow: inset 0px 3px 0px 0px #bfbfbf;
+    -webkit-box-shadow: inset 0px 3px 0px 0px #bfbfbf;
+            box-shadow: inset 0px 3px 0px 0px #bfbfbf;
 }
 /*filters end*/
 
@@ -1353,12 +1404,18 @@ button.filter-button:active {
 }
 
 .sorting {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 50px;
 }
 
 .sorting .list-by {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     list-style: none;
@@ -1417,9 +1474,14 @@ button.filter-button:active {
 
 /*catalog-templates start*/
 .catalog-templates {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     width: 760px;
 }
@@ -1480,8 +1542,12 @@ button.filter-button:active {
 
 /*pagination-list end*/
 .pagination-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     width: 375px;
     margin: 0;
@@ -1514,7 +1580,8 @@ button.filter-button:active {
 .pagination-list li:not(:first-of-type) a:active {
     color: rgba(0, 0, 0, 0.3);
     background-color: #d5d5d5;
-    box-shadow: inset 0px 3px 0px 0px #bfbfbf;
+    -webkit-box-shadow: inset 0px 3px 0px 0px #bfbfbf;
+            box-shadow: inset 0px 3px 0px 0px #bfbfbf;
 }
 
 .pagination-item-current a {
